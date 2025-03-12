@@ -7,7 +7,7 @@
     "clusterName": "my-cluster",
     "extensionTypeName": "my-extension-type",
     "versionNumber": "v1.3.2",
-    "api-version": "2024-11-01-preview"
+    "api-version": "2025-03-01-preview"
   },
   "responses": {
     "200": {
