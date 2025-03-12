@@ -603,6 +603,9 @@
             },
             "managementDetails": {
               "$ref": "#/definitions/ManagementDetailsForClusterTypes"
+            },
+            "additionalDetails":{
+              "$ref": "#/definitions/AdditionalDetails"
             }
           }
         }
@@ -793,7 +796,20 @@
           }
         }
       }
-    }
+    },
+    "AdditionalDetails": {
+      "properties": {
+        "docs": {
+          "type": "string"
+        },
+        "releaseNotes": {
+          "type": "string"
+        },
+        "troubleshootingGuide": {
+          "type": "string"
+        }
+      }
+    }    
   },
   "parameters": {
     "ExtensionTypeNameParameter": {
