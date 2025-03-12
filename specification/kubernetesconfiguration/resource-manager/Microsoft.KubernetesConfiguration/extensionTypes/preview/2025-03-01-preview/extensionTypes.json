@@ -600,6 +600,9 @@
                   "$ref": "#/definitions/ClusterScopeSettings"
                 }
               }
+            },
+            "managementDetails": {
+              "$ref": "#/definitions/ManagementDetailsForClusterTypes"
             }
           }
         }
@@ -745,6 +748,51 @@
         }
       },
       "x-ms-identifiers": []
+    },
+    "ManagementDetailsForClusterTypes": {
+      "description": "Management details for each cluster type",
+      "type": "object",
+      "properties": {
+        "connectedClusters": {
+          "$ref": "#/definitions/ManagementDetails"
+        },
+        "managedClusters": {
+          "$ref": "#/definitions/ManagementDetails"
+        },
+        "applianceClusters": {
+          "$ref": "#/definitions/ManagementDetails"
+        }
+      }
+    },    
+    "ManagementDetails": {
+      "description": "Management details",
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "accessDetails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "entity": {
+                "type": "string"
+              },
+              "allowedActions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "entity",
+              "allowedActions"
+            ]
+          }
+        }
+      }
     }
   },
   "parameters": {
